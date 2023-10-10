@@ -8,7 +8,7 @@ function App() {
   const [data, setData] = useState([])
 
   async function fetchData() {
-    await fetch('http://localhost:8080')
+    await fetch('http://localhost:3000')
       .then(res => res.json())
       .then(result => {
         setData(result)
@@ -21,7 +21,6 @@ function App() {
 
   return (
     <>
-
       <BrowserRouter>
         <Routes>
           <Route path='/Cart' element={<Cart />} />
