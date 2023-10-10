@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-
+      <button onClick={fetchData}>fetchData</button>
       <body>
         <header>
           <div className="languages-frakt">
@@ -153,18 +153,20 @@ function App() {
               <div className="icon-blue"><i className="material-icons-blue">info</i></div>
               <div className="contents-wrapper-blue">
                 <table>
-                  <tr>
-                    <th>Mobilskal</th>
-                    <th>Information</th>
-                  </tr>
-                  <tr>
-                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                      Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </td>
-                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                      Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <th>Mobilskal</th>
+                      <th>Information</th>
+                    </tr>
+                    <tr>
+                      <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum has been the industrys standard dummy text ever since the 1500s.
+                      </td>
+                      <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum has been the industrys standard dummy text ever since the 1500s.
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
