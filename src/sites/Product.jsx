@@ -8,7 +8,8 @@ import Footer from '../contents/footer'
 function Product() {
 
     return (
-        <body>
+        <div>
+
 
             <Header />
 
@@ -45,8 +46,7 @@ function Product() {
 
 
             <Footer />
-
-        </body>
+        </div>
     )
 }
 

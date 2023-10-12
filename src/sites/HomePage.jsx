@@ -9,7 +9,7 @@ import Footer from '../contents/footer'
 function HomePage() {
 
     return (
-        <body>
+        <div>
 
             <Header />
 
@@ -22,42 +22,42 @@ function HomePage() {
 
 
             <div className="meny">
-                <div><a>
+                <div><a href='#'>
                     <button className="button-meny">
                         <h2 className="border-case">Mönstrade skal</h2>
                     </button>
                 </a></div>
-                <div><a>
+                <div><a href='#'>
                     <button className="button-meny">
                         <h2 className="border-case">Spegelskal</h2>
                     </button>
                 </a></div>
-                <div><a>
+                <div><a href='#'>
                     <button className="button-meny">
                         <h2 className="border-case">Genomskinliga skal</h2>
                     </button>
                 </a></div>
-                <div><a>
+                <div><a href='#'>
                     <button className="button-meny">
                         <h2 className="border-case">Silikonskal</h2>
                     </button>
                 </a></div>
-                <div><a>
+                <div><a href='#'>
                     <button className="button-meny">
                         <h2 className="border-case">Tunna skal</h2>
                     </button>
                 </a></div>
-                <div><a>
+                <div><a href='#'>
                     <button className="button-meny">
                         <h2 className="border-case">Konstläderskal</h2>
                     </button>
                 </a></div>
-                <div><a>
+                <div><a href='#'>
                     <button className="button-meny">
                         <h2 className="border-case">Plånboksfodral</h2>
                     </button>
                 </a></div>
-                <div><a>
+                <div><a href='#'>
                     <button className="button-meny">
                         <h2 className="border-case">MagSafe skal</h2>
                     </button>
@@ -74,7 +74,7 @@ function HomePage() {
                                 <h1>Mobilskal</h1>
                                 <p className="price-blue">£250</p>
                             </div>
-                            <a href="Product"><button type="button" className="cart"><svg xmlns="http://www.w3.org/2000/svg"
+                            <a href="Product"><button aria-label='cart' type="button" className="cart"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="16" height="16" fill="currentColor" className="bi bi-cart-check-blue"
                                 viewBox="0 0 16 16">
                                 <path
@@ -123,7 +123,7 @@ function HomePage() {
 
             <Footer />
 
-        </body>
+        </div>
     )
 }
 
