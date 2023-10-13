@@ -2,7 +2,8 @@
 import './ProductCard.css'
 import './Header.css'
 
-function ProductCard() {
+function ProductCard(props) {
+    let { name, price, description } = props;
 
     return (
         <>
@@ -11,8 +12,8 @@ function ProductCard() {
                     <div className="top-wrapper"></div>
                     <div className="center-price">
                         <div className="center-price-grid">
-                            <h1>Mobilskal</h1>
-                            <p className="price">£250</p>
+                            <h1>{name}</h1>
+                            <p className="price">{price}</p>
                         </div>
                         <a href="Product"><button aria-label='cart' type="button" className="cart"><svg xmlns="http://www.w3.org/2000/svg"
                             width="16" height="16" fill="currentColor" className="bi bi-cart-check" viewBox="0 0 16 16">
@@ -33,12 +34,7 @@ function ProductCard() {
                                     <th>Information</th>
                                 </tr>
                                 <tr>
-                                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                        has been the industrys standard dummy text ever since the 1500s, when an unknown
-                                        printer took a galley of type and scrambled it to make a type specimen book.</td>
-                                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                        has been the industrys standard dummy text ever since the 1500s, when an unknown
-                                        printer took a galley of type and scrambled it to make a type specimen book.</td>
+                                    {description}
                                 </tr>
                             </tbody>
                         </table>

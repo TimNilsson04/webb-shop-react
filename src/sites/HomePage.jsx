@@ -1,4 +1,4 @@
-
+import { useState } from 'react'
 import '../App.css'
 import '../contents/Header.css'
 import '../contents/MediaQuery.css'
@@ -7,6 +7,20 @@ import Header from '../contents/Header'
 import Footer from '../contents/footer'
 
 function HomePage() {
+    const [data, setData] = useState([])
+
+    async function fetchData() {
+        await fetch('http://localhost:3000')
+            .then(res => res.json())
+            .then(result => {
+                setData(result)
+                console.log(result)
+            }).catch(err => {
+                console.log(err)
+            })
+    }
+
+    fetchData()
 
     return (
         <div>
@@ -107,10 +121,15 @@ function HomePage() {
                     </div>
                 </div>
                 <div className="grid-products-top">
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
+                    {data.map((item) => (
+                        < ProductCard
+                            key={item.id}
+                            image={item.image}
+                            name={item.name}
+                            description={item.description}
+                            price={item.price}
+                        />
+                    ))}
                 </div>
             </div>
 

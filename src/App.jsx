@@ -5,19 +5,6 @@ import Product from './sites/Product'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
-  const [data, setData] = useState([])
-
-  async function fetchData() {
-    await fetch('http://localhost:3000')
-      .then(res => res.json())
-      .then(result => {
-        setData(result)
-        console.log(result)
-      }).catch(err => {
-        console.log(err)
-      })
-  }
-
 
   return (
     <>
