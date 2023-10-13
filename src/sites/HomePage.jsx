@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../App.css'
 import '../contents/Header.css'
 import '../contents/MediaQuery.css'
@@ -10,17 +10,20 @@ function HomePage() {
     const [data, setData] = useState([])
 
     async function fetchData() {
-        await fetch('http://localhost:3000')
+        await fetch('http://localhost:3000/product')
             .then(res => res.json())
             .then(result => {
-                setData(result)
-                console.log(result)
+                setData(result.data)
+                console.log(result.data)
             }).catch(err => {
                 console.log(err)
             })
     }
+    useEffect(() => {
+        fetchData()
+        console.log(data)
+    }, [])
 
-    fetchData()
 
     return (
         <div>
@@ -82,7 +85,7 @@ function HomePage() {
 
                 <div className="wrapper-blue">
                     <div className="container-wrapper-blue">
-                        <div className="top-wrapper-blue"></div>
+                        <div /*style={{ backgroundImage: `url(img/${data[0].picture})` }}*/ className="top-wrapper-blue"></div>
                         <div className="center-price-blue">
                             <div className="center-price-grid-blue">
                                 <h1>Mobilskal</h1>
@@ -124,7 +127,7 @@ function HomePage() {
                     {data.map((item) => (
                         < ProductCard
                             key={item.id}
-                            image={item.image}
+                            picture={item.picture}
                             name={item.name}
                             description={item.description}
                             price={item.price}
@@ -134,10 +137,15 @@ function HomePage() {
             </div>
 
             <div className="grid-products">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {data.map((item) => (
+                    < ProductCard
+                        key={item.id}
+                        picture={item.picture}
+                        name={item.name}
+                        description={item.description}
+                        price={item.price}
+                    />
+                ))}
             </div>
 
             <Footer />

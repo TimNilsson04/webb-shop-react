@@ -23,7 +23,7 @@
 
 .price {
     margin: 0%;
-    font-size: var(--step-2);
+    font-size: var(--step-1);
 
 }
 
@@ -38,7 +38,7 @@
 
 .center-price h1 {
     margin: 0;
-    font-size: var(--step-3);
+    font-size: var(--step-1);
     justify-content: left;
 
 }
@@ -68,7 +68,7 @@
 
 .price-blue {
     margin: 0%;
-    font-size: var(--step-3);
+    font-size: var(--step-4);
 
 }
 
@@ -113,7 +113,7 @@
     .top-wrapper {
         height: 80%;
         width: 100%;
-        background: url("/img/case.jpg") no-repeat;
+        background: no-repeat;
         -webkit-background-size: 100%;
         -moz-background-size: 100%;
         -o-background-size: 100%;
@@ -236,7 +236,7 @@
     .top-wrapper-blue {
         height: 80%;
         width: 100%;
-        background: url("/img/case-blue.jpg") no-repeat;
+        background: url("/img/1.jpg") no-repeat;
         -webkit-background-size: 100%;
         -moz-background-size: 100%;
         -o-background-size: 100%;

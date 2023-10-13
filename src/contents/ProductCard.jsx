@@ -3,17 +3,25 @@ import './ProductCard.css'
 import './Header.css'
 
 function ProductCard(props) {
-    let { name, price, description } = props;
+    let {
+        name,
+        picture,
+        description,
+        price,
+
+    } = props;
+
+    // let {picture} = props
 
     return (
         <>
             <div className="wrapper">
                 <div className="container-wrapper">
-                    <div className="top-wrapper"></div>
+                    <div style={{ backgroundImage: `url(img/${picture})` }} className="top-wrapper"></div>
                     <div className="center-price">
                         <div className="center-price-grid">
                             <h1>{name}</h1>
-                            <p className="price">{price}</p>
+                            <p className="price">{price}£</p>
                         </div>
                         <a href="Product"><button aria-label='cart' type="button" className="cart"><svg xmlns="http://www.w3.org/2000/svg"
                             width="16" height="16" fill="currentColor" className="bi bi-cart-check" viewBox="0 0 16 16">
@@ -30,8 +38,9 @@ function ProductCard(props) {
                         <table>
                             <tbody>
                                 <tr>
-                                    <th>Mobilskal</th>
-                                    <th>Information</th>
+                                    <th>Mobilskal
+                                        Information
+                                    </th>
                                 </tr>
                                 <tr>
                                     {description}
@@ -40,7 +49,7 @@ function ProductCard(props) {
                         </table>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
