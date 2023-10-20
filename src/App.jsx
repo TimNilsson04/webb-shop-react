@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
 import HomePage from './sites/HomePage'
 import Cart from './sites/Cart'
 import Product from './sites/Product'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { CartContextProvider } from './context/cartContextProvider'
+
 
 function App() {
   // async function fetchData() {
@@ -21,13 +22,15 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/Cart' element={<Cart />} />
-          <Route path='/' element={<HomePage />} />
-          <Route path='/Product' element={<Product />} />
-        </Routes>
-      </BrowserRouter>
+      <CartContextProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/' element={<HomePage />} />
+            <Route path='/product/:id' element={<Product />} />
+          </Routes>
+        </BrowserRouter>
+      </CartContextProvider>
     </>
   )
 }

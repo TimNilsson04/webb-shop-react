@@ -396,7 +396,7 @@
     .top-wrapper-blue-product {
         height: 100%;
         width: 100%;
-        background: url("/img/case-blue.jpg") no-repeat;
+        background: no-repeat;
         -webkit-background-size: 100%;
         -moz-background-size: 100%;
         -o-background-size: 100%;

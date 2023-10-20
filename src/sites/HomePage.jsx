@@ -89,9 +89,9 @@ function HomePage() {
                     {data[0] ? (
                         <>
                             <BigProductCard
-                                picture={data[3].picture}
+                                picture={data[2].picture}
                                 description={data[2].description}
-                                name={data[2].name}
+                                name={data[3].name}
                                 price={data[1].price}
                             />
 
@@ -106,6 +106,7 @@ function HomePage() {
                     {data.map((item) => (
                         < ProductCard
                             key={item.id}
+                            id={item.id}
                             picture={item.picture}
                             name={item.name}
                             description={item.description}
@@ -120,6 +121,7 @@ function HomePage() {
                 {data.map((item) => (
                     < ProductCard
                         key={item.id}
+                        id={item.id}
                         picture={item.picture}
                         name={item.name}
                         description={item.description}
