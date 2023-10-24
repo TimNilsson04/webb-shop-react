@@ -12,6 +12,7 @@ import { CartContext } from "../context/cartContextProvider";
 function Cart() {
     const cart = useContext(CartContext);
 
+    console.log(cart.cart[0].picture)
 
     return (
         <>
@@ -25,7 +26,8 @@ function Cart() {
                             <div className="product-placement">
                                 <div className="wrapper-cart">
                                     <div className="container-wrapper-cart">
-                                        <div style={{ backgroundImage: `url(./img/${item.picture})` }} className="top-wrapper-cart"></div>
+                                        {/* <img src={`../img/${item.picture}`} alt="" /> */}
+                                        <div style={{ backgroundImage: `url(../img/${item.picture})` }} className="top-wrapper-cart"></div>
                                     </div>
                                 </div>
                                 <div className="product-placement">
@@ -42,13 +44,13 @@ function Cart() {
                             </div>
 
                         </div>
-                        <div className="buy-total">
-                            [Totala pris]
-                            <button className="button-meny">Betala</button>
-                        </div>
                     </li>
                 )
             })}
+            <div className="buy-total">
+                [Totala pris]
+                <button className="button-meny">Betala</button>
+            </div>
             <Footer />
         </>
     )

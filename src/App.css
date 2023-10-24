@@ -45,6 +45,7 @@ body {
   color: var(--color-txt);
   margin-right: 3%;
   margin-left: 3%;
+  list-style: none;
 }
 
 a {
@@ -136,7 +137,6 @@ footer {
   font-family: 'Anton', sans-serif;
 }
 
-.hero-text {}
 
 .icons {
   width: 30px;

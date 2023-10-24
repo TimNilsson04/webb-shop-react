@@ -89,10 +89,12 @@ function HomePage() {
                     {data[0] ? (
                         <>
                             <BigProductCard
+                                key={data[2].id}
                                 picture={data[2].picture}
+                                id={data[2].id}
                                 description={data[2].description}
-                                name={data[3].name}
-                                price={data[1].price}
+                                name={data[2].name}
+                                price={data[2].price}
                             />
 
                         </>

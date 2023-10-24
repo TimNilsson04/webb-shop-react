@@ -30,6 +30,7 @@ function Product() {
     return (
         < ProductPage
             key={data.id}
+            id={data.id}
             picture={data.picture}
             name={data.name}
             description={data.description}
