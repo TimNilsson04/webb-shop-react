@@ -3,22 +3,25 @@ import './ProductCard.css'
 import './Header.css'
 import { Link } from 'react-router-dom'
 
+function BigProductCard(props) {
 
 
-function ProductCard(props) {
+    // let {picture} = props
 
     return (
         <>
-            <div className="wrapper">
-                <div className="container-wrapper">
-                    <div style={{ backgroundImage: `url(img/${props.picture})` }} className="top-wrapper"></div>
-                    <div className="center-price">
-                        <div className="center-price-grid">
+
+            <div className="wrapper-blue">
+                <div className="container-wrapper-blue">
+                    <div style={{ backgroundImage: `url(img/${props.picture})` }} className="top-wrapper-blue"></div>
+                    <div className="center-price-blue">
+                        <div className="center-price-grid-blue">
                             <h1>{props.name}</h1>
-                            <p className="price">{props.price}£</p>
+                            <p className="price-blue">{props.price}£</p>
                         </div>
                         <Link to={'/product/' + props.id}><button aria-label='cart' type="button" className="cart"><svg xmlns="http://www.w3.org/2000/svg"
-                            width="16" height="16" fill="currentColor" className="bi bi-cart-check" viewBox="0 0 16 16">
+                            width="16" height="16" fill="currentColor" className="bi bi-cart-check-blue"
+                            viewBox="0 0 16 16">
                             <path
                                 d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
                             <path
@@ -26,9 +29,9 @@ function ProductCard(props) {
                         </svg></button></Link>
                     </div>
                 </div>
-                <div className="inside-wrapper">
-                    <div className="icon"><i className="material-icons">info</i></div>
-                    <div className="contents-wrapper">
+                <div className="inside-wrapper-blue">
+                    <div className="icon-blue"><i className="material-icons-blue">info</i></div>
+                    <div className="contents-wrapper-blue">
                         <table>
                             <tbody>
                                 <tr>
@@ -37,15 +40,17 @@ function ProductCard(props) {
                                     </th>
                                 </tr>
                                 <tr>
-                                    {props.description}
+                                    <td>
+                                        {props.description}
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-            </div >
+            </div>
         </>
     )
 }
 
-export default ProductCard
+export default BigProductCard
